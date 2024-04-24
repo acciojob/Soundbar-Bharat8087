@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundbar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<div id="buttons">
-    <button class="btn" onclick="playSound('sound1.mp3')">applause</button>
-    <button class="btn" onclick="playSound('sound2.mp3')">boo</button>
-    <button class="btn" onclick="playSound('sound3.mp3')">gasp</button>
-	<button class="btn" onclick="playSound('sound3.mp3')">tada</button>
-    <button class="btn" onclick="playSound('sound3.mp3')">victory</button>
-    <button class="btn" onclick="playSound('sound3.mp3')">wrong</button>
-
-    <button class="btn stop" onclick="stopSound()">Stop</button>
-  </div>
-  <audio id="audio" controls></audio>
-  
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <div id="buttons">
+        <button class="btn" onclick="playSound('sound1.mp3')">applause</button>
+        <button class="btn" onclick="playSound('sound2.mp3')">boo</button>
+        <button class="btn" onclick="playSound('sound3.mp3')">gasp</button>
+        <button class="btn" onclick="playSound('sound4.mp3')">tada</button>
+        <button class="btn" onclick="playSound('sound5.mp3')">victory</button>
+        <button class="btn" onclick="playSound('sound6.mp3')">wrong</button>
+        <button class="stop" onclick="stopSound()">Stop</button>
+    </div>
+    <audio id="audio" controls></audio>
+    <script src="script.js"></script>
 </body>
-
 </html>

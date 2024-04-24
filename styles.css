@@ -1,20 +1,18 @@
-/*  your css code here. If applicable */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
 }
-project_folder
-│   main.html
-│   script.js
-│   styles.css
-│
-└───sounds
-    │   sound1.mp3
-    │   sound2.mp3
-    │   sound3.mp3
 
+.soundbar-container {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+}
 
 #buttons {
   margin-top: 20px;
