@@ -1,1 +1,33 @@
 /*  your css code here. If applicable */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.stop {
+  background-color: #f44336;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+audio {
+  display: none;
+}
