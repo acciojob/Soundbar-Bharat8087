@@ -1,28 +1,16 @@
-var audio = document.getElementById('audio');
-
-function playSound(soundFile) {
-    stopSound(); // Stop any currently playing sound
-    audio.src = 'sounds/' + soundFile;
-    audio.play().catch(function(error) {
-        console.error('Failed to play audio:', error);
+describe('Soundbar functionality', () => {
+    beforeEach(() => {
+        cy.visit('/');
     });
-}
 
-function stopSound() {
-    if (!audio.paused) {
-        audio.pause();
-        audio.currentTime = 0;
-    }
-}
+    it('Plays sound on button click', () => {
+        cy.get('.btn').first().click();
+        cy.get('audio').should('have.prop', 'paused', false);
+    });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var buttons = document.getElementsByClassName('btn');
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function() {
-            var soundFile = this.getAttribute('onclick').split("'")[1];
-            if (soundFile) {
-                playSound(soundFile);
-            }
-        });
-    }
+    it('Stops sound on stop button click', () => {
+        cy.get('.btn').first().click();
+        cy.get('.stop').click();
+        cy.get('audio').should('have.prop', 'paused', true);
+    });
 });
