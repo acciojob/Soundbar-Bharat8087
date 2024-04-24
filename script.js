@@ -1,12 +1,13 @@
 //your JS code here. If required.
+var audio = document.getElementById('audio');
+
 function playSound(soundFile) {
-    var audio = document.getElementById('audio');
+    stopSound(); // Stop any currently playing sound
     audio.src = 'sounds/' + soundFile;
     audio.play();
 }
 
 function stopSound() {
-    var audio = document.getElementById('audio');
     audio.pause();
     audio.currentTime = 0;
 }
