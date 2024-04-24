@@ -2,7 +2,7 @@
 var audio = document.getElementById('audio');
 
 function playSound(soundFile) {
-    stopSound(); // Stop any currently playing sound
+    stopSound(); 
     audio.src = 'sounds/' + soundFile;
     audio.play();
 }
