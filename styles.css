@@ -5,6 +5,16 @@ body {
   margin: 0;
   padding: 0;
 }
+project_folder
+│   main.html
+│   script.js
+│   styles.css
+│
+└───sounds
+    │   sound1.mp3
+    │   sound2.mp3
+    │   sound3.mp3
+
 
 #buttons {
   margin-top: 20px;
