@@ -16,19 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var buttons = document.getElementsByClassName('btn');
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() {
-            var onclickAttr = this.getAttribute('onclick');
-            var soundFile = extractSoundFileName(onclickAttr);
+            var soundFile = this.getAttribute('onclick').split("'")[1];
             if (soundFile) {
                 playSound(soundFile);
             }
         });
     }
-    
-    var stopButton = document.getElementsByClassName('stop')[0];
-    stopButton.addEventListener('click', stopSound);
 });
-
-function extractSoundFileName(onclickAttr) {
-    var match = onclickAttr.match(/'([^']+)'/);
-    return match ? match[1] : null;
-}
