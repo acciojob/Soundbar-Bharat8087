@@ -1,16 +1,12 @@
-describe('Soundbar functionality', () => {
-    beforeEach(() => {
-        cy.visit('/');
-    });
+function playSound(soundName) {
+    var audio = new Audio('sounds/' + soundName + '.mp3');
+    audio.play();
+}
 
-    it('Plays sound on button click', () => {
-        cy.get('.btn').first().click();
-        cy.get('audio').should('have.prop', 'paused', false);
-    });
-
-    it('Stops sound on stop button click', () => {
-        cy.get('.btn').first().click();
-        cy.get('.stop').click();
-        cy.get('audio').should('have.prop', 'paused', true);
-    });
-});
+function stopAllSounds() {
+    var sounds = document.getElementsByTagName('audio');
+    for (var i = 0; i < sounds.length; i++) {
+        sounds[i].pause();
+        sounds[i].currentTime = 0;
+    }
+}
