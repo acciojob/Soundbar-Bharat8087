@@ -1,6 +1,8 @@
 function playSound(soundName) {
-    var audio = new Audio('sounds/' + soundName + '.mp3');
+    var audio = document.createElement('audio');
+    audio.src = 'sounds/' + soundName + '.mp3';
     audio.play();
+    document.body.appendChild(audio);
 }
 
 function stopAllSounds() {
@@ -8,5 +10,6 @@ function stopAllSounds() {
     for (var i = 0; i < sounds.length; i++) {
         sounds[i].pause();
         sounds[i].currentTime = 0;
+        document.body.removeChild(sounds[i]); // Remove audio elements from DOM
     }
 }
